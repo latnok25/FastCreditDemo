@@ -2,6 +2,7 @@ package com.fastcredit.fastcreditdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -41,4 +42,10 @@ public class LoginPagee extends AppCompatActivity {
 
     }
 
+    public void GoTo(View view) {
+        Intent intent = new Intent(LoginPagee.this, LoginPage2.class);
+        startActivity(intent);
+        //overridePendingTransition(R.anim.fadeinfast, R.anim.fadeoutfast);
+        finish();
+    }
 }

@@ -45,16 +45,17 @@
             android:layout_height="50dp"
             app:cardCornerRadius="10dp"
             android:background="#fff"
+            android:padding="5dp"
             android:layout_marginLeft="80dp"
             android:layout_marginRight="80dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="0dp">
         <Button
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="60dp"
             android:text="Login"
             android:backgroundTint="#FF0000"
-
+            android:onClick="GoTo"
             >
 
         </Button>
@@ -64,13 +65,14 @@
             android:layout_height="50dp"
             app:cardCornerRadius="10dp"
             android:background="#fff"
+            android:padding="5dp"
             android:layout_marginLeft="80dp"
             android:layout_marginRight="80dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp">
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="60dp"
                 android:text="Create Account"
                 android:backgroundTint="#000"
 
