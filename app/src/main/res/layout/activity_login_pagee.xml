@@ -15,57 +15,66 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
         <ImageView
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_width="400dp"
+            android:layout_height="290dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/nfast"
             android:id="@+id/image"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="23sp"
-            android:textColor="#fff"
+            android:textColor="#000"
             android:id="@+id/txt"
+            android:textStyle="bold"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
-            android:text="@string/app_name"/>
+            android:text="Welcome to FastCredit"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="23sp"
-            android:textColor="#fff"
+            android:textSize="15sp"
+            android:textColor="#000"
             android:id="@+id/txtt"
-            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_gravity="center"
             android:layout_marginTop="5dp"
-            android:text="@string/app_name"/>
+            android:text="The best place to get loans and make investments."/>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             app:cardCornerRadius="10dp"
             android:background="#fff"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="0dp">
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Login"
+            android:backgroundTint="#FF0000"
+
             >
 
         </Button>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             app:cardCornerRadius="10dp"
             android:background="#fff"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Create Account"
+                android:backgroundTint="#000"
+
+                >
 
         </Button>
         </androidx.cardview.widget.CardView>

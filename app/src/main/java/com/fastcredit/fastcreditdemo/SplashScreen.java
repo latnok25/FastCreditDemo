@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -23,11 +24,66 @@ public class SplashScreen extends AppCompatActivity {
 
         Text = findViewById(R.id.txt);
         Image = findViewById(R.id.image);
+
+        startanim();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        hideSystemUI();
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+
+        hideSystemUI();
+    }
+
+    private void hideSystemUI() {
+        // Set the IMMERSIVE flag.
+        // Set the content to appear under the system bars so that the content
+        // doesn't resize when the system bars hide and show.
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE);
+
+    }
+
+    private void blink(){
+        final Handler handler = new Handler();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int timeToBlink = 200;    //in milissegunds
+                try{Thread.sleep(timeToBlink);}catch (Exception e) {}
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        if(Image.getVisibility() == View.VISIBLE){
+                            Image.setVisibility(View.INVISIBLE);
+                        }else{
+                            Image.setVisibility(View.VISIBLE);
+                        }
+                        blink();
+                    }
+                });
+            }
+        }).start();
     }
 
     private void startanim() {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.fadein);
         Animation animationtwo = AnimationUtils.loadAnimation(this, R.anim.fadeinfast);
+        Animation anim = new AlphaAnimation(0.0f, 1.0f);
+         blink();
         Text.setVisibility(View.INVISIBLE);
         //txt!!.visibility = View.INVISIBLE;
 
@@ -77,7 +133,7 @@ public class SplashScreen extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+                        Intent intent = new Intent(SplashScreen.this, LoginPagee.class);
                         startActivity(intent);
                         overridePendingTransition(R.anim.fadeinfast, R.anim.fadeoutfast);
                         finish();
