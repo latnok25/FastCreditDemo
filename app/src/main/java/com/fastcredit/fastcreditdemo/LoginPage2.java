@@ -51,6 +51,7 @@ public class LoginPage2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page2);
+        hideSystemUI();
         requestQueue = Volley.newRequestQueue(this.getApplicationContext());
         sendAndRequestResponse();
 
@@ -81,6 +82,7 @@ public class LoginPage2 extends AppCompatActivity {
                     View view = (View) findViewById(R.id.cord);
                     final Snackbar snackbar = Snackbar.make(view, "Kindly input your email", Snackbar.LENGTH_INDEFINITE);
                     snackbar.getView().setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+                    snackbar.setTextColor(getResources().getColor(android.R.color.white));
                     snackbar.setActionTextColor(getResources().getColor(android.R.color.white));
                     snackbar.show();
                     snackbar.setAction("Dismiss", new View.OnClickListener() {
@@ -96,6 +98,7 @@ public class LoginPage2 extends AppCompatActivity {
                     View view = (View) findViewById(R.id.cord);
                     final Snackbar snackbar = Snackbar.make(view, "Kindly input your password", Snackbar.LENGTH_INDEFINITE);
                     snackbar.getView().setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
+                    snackbar.setTextColor(getResources().getColor(android.R.color.white));
                     snackbar.setActionTextColor(getResources().getColor(android.R.color.white));
                     snackbar.show();
                     snackbar.setAction("Dismiss", new View.OnClickListener() {
@@ -118,6 +121,7 @@ public class LoginPage2 extends AppCompatActivity {
                         final Snackbar snackbar = Snackbar.make(view, "Wrong Password", Snackbar.LENGTH_INDEFINITE);
                         snackbar.getView().setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
                         snackbar.setActionTextColor(getResources().getColor(android.R.color.white));
+                        snackbar.setTextColor(getResources().getColor(android.R.color.white));
                         snackbar.show();
                         snackbar.setAction("Dismiss", new View.OnClickListener() {
                             @Override
@@ -132,6 +136,7 @@ public class LoginPage2 extends AppCompatActivity {
                     final Snackbar snackbar = Snackbar.make(view, "Wrong Email", Snackbar.LENGTH_INDEFINITE);
                     snackbar.getView().setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
                     snackbar.setActionTextColor(getResources().getColor(android.R.color.white));
+                    snackbar.setTextColor(getResources().getColor(android.R.color.white));
                     snackbar.show();
                     snackbar.setAction("Dismiss", new View.OnClickListener() {
                         @Override
@@ -191,6 +196,7 @@ public class LoginPage2 extends AppCompatActivity {
                     final Snackbar snackbar = Snackbar.make(view, "Something went wrong please try later", Snackbar.LENGTH_INDEFINITE);
                     snackbar.getView().setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
                     snackbar.setActionTextColor(getResources().getColor(android.R.color.white));
+                    snackbar.setTextColor(getResources().getColor(android.R.color.white));
                     snackbar.show();
                     snackbar.setAction("Dismiss", new View.OnClickListener() {
                         @Override
@@ -222,6 +228,7 @@ public class LoginPage2 extends AppCompatActivity {
                     final Snackbar snackbar = Snackbar.make(view, "No Connection Available", Snackbar.LENGTH_INDEFINITE);
                     snackbar.getView().setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
                     snackbar.setActionTextColor(getResources().getColor(android.R.color.white));
+                    snackbar.setTextColor(getResources().getColor(android.R.color.white));
                     snackbar.show();
                     snackbar.setAction("Dismiss", new View.OnClickListener() {
                         @Override
@@ -239,6 +246,7 @@ public class LoginPage2 extends AppCompatActivity {
                     final Snackbar snackbar = Snackbar.make(view, "Something went wrong, Try Again", Snackbar.LENGTH_INDEFINITE);
                     snackbar.getView().setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.black));
                     snackbar.setActionTextColor(getResources().getColor(android.R.color.white));
+                    snackbar.setTextColor(getResources().getColor(android.R.color.white));
                     snackbar.show();
                     snackbar.setAction("Dismiss", new View.OnClickListener() {
                         @Override
@@ -256,6 +264,12 @@ public class LoginPage2 extends AppCompatActivity {
 
     @Override
     protected void onResume() {
+        super.onResume();
+        hideSystemUI();
+    }
+
+    @Override
+    protected void onStart() {
         super.onResume();
         hideSystemUI();
     }

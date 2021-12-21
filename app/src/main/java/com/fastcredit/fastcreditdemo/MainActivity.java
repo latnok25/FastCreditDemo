@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        hideSystemUI();
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
@@ -31,6 +32,12 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     protected void onResume() {
         super.onResume();
+        hideSystemUI();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
         hideSystemUI();
     }
 

@@ -12,11 +12,18 @@ public class LoginPagee extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_pagee);
+        hideSystemUI();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        hideSystemUI();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
         hideSystemUI();
     }
 
