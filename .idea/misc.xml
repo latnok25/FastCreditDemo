@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-anydpi/rectred.xml" value="0.11302083333333333" />
+        <entry key="app/src/main/res/drawable/bblack_gradient.xml" value="0.22083333333333333" />
+        <entry key="app/src/main/res/drawable/check.xml" value="0.22083333333333333" />
+        <entry key="app/src/main/res/drawable/checked.xml" value="0.22083333333333333" />
+        <entry key="app/src/main/res/drawable/custom_checkbox.xml" value="0.22083333333333333" />
+        <entry key="app/src/main/res/drawable/green_gradient.xml" value="0.22083333333333333" />
+        <entry key="app/src/main/res/drawable/red_gradieent.xml" value="0.22083333333333333" />
+        <entry key="app/src/main/res/drawable/uncheck.xml" value="0.22083333333333333" />
+        <entry key="app/src/main/res/drawable/unchecked.xml" value="0.22083333333333333" />
+        <entry key="app/src/main/res/drawable/yellow_gradient.xml" value="0.22083333333333333" />
         <entry key="app/src/main/res/layout/activity_login_page2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login_pagee.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.10190217391304347" />

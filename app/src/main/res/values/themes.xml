@@ -17,4 +17,9 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+
+    <style name="CustomCheckbox02" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/custom_checkbox</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
 </resources>

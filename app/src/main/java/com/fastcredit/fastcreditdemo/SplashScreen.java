@@ -83,7 +83,7 @@ public class SplashScreen extends AppCompatActivity {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.fadein);
         Animation animationtwo = AnimationUtils.loadAnimation(this, R.anim.fadeinfast);
         Animation anim = new AlphaAnimation(0.0f, 1.0f);
-         blink();
+
         Text.setVisibility(View.INVISIBLE);
         //txt!!.visibility = View.INVISIBLE;
 
@@ -106,6 +106,7 @@ public class SplashScreen extends AppCompatActivity {
                     public void run() {
                         Text.setVisibility(View.VISIBLE);
                         Text.startAnimation(animationtwo);
+                        blink();
                         //Write whatever to want to do after delay specified (1 sec)
                         Log.d("Handler", "Running Handler");
                     }
